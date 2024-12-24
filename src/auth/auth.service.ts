@@ -19,7 +19,7 @@ export class AuthService {
 		const tokens = this.issueTokens(user.id)
 		return {
 			user,
-			tokens,
+			...tokens,
 		}
 	}
 
@@ -31,7 +31,8 @@ export class AuthService {
 		const { password, ...user } = await this.userService.create(dto)
 		const tokens = this.issueTokens(user.id)
 		return {
-			tokens,
+			user,
+			...tokens,
 		}
 	}
 

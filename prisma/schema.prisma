@@ -36,7 +36,7 @@ model Task {
     createdAt DateTime @default(now()) @map("created_at")
     updatedAt DateTime @updatedAt @map("update_at")
 
-    nane String 
+    name String 
     priority Priority? 
     isCompleted Boolean? @default(false) @map("is_completed")
     
